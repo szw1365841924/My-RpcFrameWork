@@ -1,10 +1,9 @@
 package socket;
 
-import api.HelloService;
 import api.HelloServiceImpl;
 import rpc.framework.register.DefaultServiceRegistry;
 import rpc.framework.register.ServiceRegistry;
-import rpc.framework.server.RpcServer;
+import rpc.framework.transport.socket.server.RpcSocketServer;
 
 public class RpcFrameworkServer {
     
@@ -12,7 +11,7 @@ public class RpcFrameworkServer {
         HelloServiceImpl service = new HelloServiceImpl();
         ServiceRegistry registry = new DefaultServiceRegistry();
         registry.register(service);
-        RpcServer server = new RpcServer(registry);
+        RpcSocketServer server = new RpcSocketServer(registry);
         server.start(9999);
     }
 }

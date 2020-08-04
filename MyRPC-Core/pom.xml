@@ -11,8 +11,13 @@
 
     <groupId>MyRPC-framework</groupId>
     <artifactId>MyRPC-Core</artifactId>
-
+    
     <dependencies>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>${netty.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.esotericsoftware</groupId>
             <artifactId>kryo</artifactId>

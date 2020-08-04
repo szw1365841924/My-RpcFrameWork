@@ -1,7 +1,11 @@
 package api.service;
 
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
+
+@NoArgsConstructor
 public class Hello implements Serializable {
     private String message;
     private String description;

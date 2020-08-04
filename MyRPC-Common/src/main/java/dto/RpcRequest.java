@@ -1,14 +1,18 @@
 package dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
 /**
  * @Builder 建造者模式
  */
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
 @Builder
 public class RpcRequest implements Serializable {
 

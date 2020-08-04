@@ -1,10 +1,14 @@
 package dto;
 
 import enumeration.RpcResponseCode;
-import lombok.Data;
+import lombok.*;
+
 import java.io.Serializable;
 
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class RpcResponse<T> implements Serializable {
     private Integer statuscode;
     private String message;

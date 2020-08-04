@@ -1,4 +1,4 @@
-package rpc.framework;
+package rpc.framework.client;
 
 import dto.RpcRequest;
 import org.slf4j.Logger;

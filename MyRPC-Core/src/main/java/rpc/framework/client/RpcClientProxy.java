@@ -1,4 +1,4 @@
-package rpc.framework;
+package rpc.framework.client;
 
 import dto.RpcRequest;
 import dto.RpcResponse;

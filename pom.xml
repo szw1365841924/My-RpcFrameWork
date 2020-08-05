@@ -21,7 +21,7 @@
         <kryo.version>4.0.2</kryo.version>
         <guava.version>29.0-jre</guava.version>
         <curator-version>4.2.0</curator-version>
-        <zookeeper-version>3.4.6</zookeeper-version>
+        <zookeeper-version>3.4.14</zookeeper-version>
         <!-- test -->
         <junit.jupiter.version>5.5.2</junit.jupiter.version>
         <junit.platform.version>1.5.2</junit.platform.version>

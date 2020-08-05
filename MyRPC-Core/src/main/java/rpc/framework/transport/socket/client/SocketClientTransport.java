@@ -1,22 +1,24 @@
 package rpc.framework.transport.socket.client;
 
+import checker.RpcMessageChecker;
 import dto.RpcRequest;
+import dto.RpcResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import rpc.RpcClient;
+import rpc.ClientTransport;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
 
-public class RpcSocketClient implements RpcClient {
-    private static final Logger logger = LoggerFactory.getLogger(RpcSocketClient.class);
+public class SocketClientTransport implements ClientTransport {
+    private static final Logger logger = LoggerFactory.getLogger(SocketClientTransport.class);
     
     private String host;
     private int port;
     
-    public RpcSocketClient(String host, int port){
+    public SocketClientTransport(String host, int port){
         this.host = host;
         this.port = port;
     }
@@ -27,7 +29,9 @@ public class RpcSocketClient implements RpcClient {
             ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());
             outputStream.writeObject(request);
             ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
-            return inputStream.readObject();
+            RpcResponse response = (RpcResponse) inputStream.readObject();
+            RpcMessageChecker.check(request, response);
+            return response; 
         }catch (Exception e){
             logger.error("发生错误: ", e);
         }

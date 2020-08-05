@@ -10,15 +10,17 @@ import java.io.Serializable;
 @Getter
 @Setter
 public class RpcResponse<T> implements Serializable {
+    private String requestId;
     private Integer statuscode;
     private String message;
     private T result;
     
-    public static <T> RpcResponse success(T result){
+    public static <T> RpcResponse success(T result, String requestId){
         RpcResponse<T> response = new RpcResponse<>();
         response.setStatuscode(RpcResponseCode.SUCCESS.getCode());
         response.setMessage(RpcResponseCode.SUCCESS.getMessage());
         response.setResult(result);
+        response.setRequestId(requestId);
         return response;
     }
     

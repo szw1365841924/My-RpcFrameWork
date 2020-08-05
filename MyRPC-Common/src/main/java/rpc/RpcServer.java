@@ -2,5 +2,7 @@ package rpc;
 
 public interface RpcServer {
     
-    void start(int port);
+    void start();
+    
+    <T> void publishService(Object obj, Class<T> clazz);
 }

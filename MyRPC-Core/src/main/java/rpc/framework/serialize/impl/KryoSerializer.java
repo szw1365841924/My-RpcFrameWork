@@ -1,4 +1,4 @@
-package rpc.framework.serialize.Impl;
+package rpc.framework.serialize.impl;
 
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Input;
@@ -7,13 +7,10 @@ import dto.RpcRequest;
 import dto.RpcResponse;
 import enumeration.RpcError;
 import exception.RpcException;
-import lombok.extern.slf4j.Slf4j;
 import rpc.framework.serialize.Serializer;
-
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
-@Slf4j
 public class KryoSerializer implements Serializer {
     
     private static final ThreadLocal<Kryo> kryoThreadLocal = ThreadLocal.withInitial(() -> {

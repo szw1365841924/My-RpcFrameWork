@@ -2,17 +2,17 @@ package rpc.framework.proxy;
 
 import dto.RpcRequest;
 import dto.RpcResponse;
-import rpc.RpcClient;
-import rpc.framework.transport.socket.client.RpcSocketClient;
+import rpc.ClientTransport;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.util.UUID;
 
 public class RpcClientProxy implements InvocationHandler {
-    private RpcClient client;
+    private ClientTransport client;
     
-    public RpcClientProxy(RpcClient client){
+    public RpcClientProxy(ClientTransport client){
         this.client = client;
     }
     
@@ -23,7 +23,13 @@ public class RpcClientProxy implements InvocationHandler {
     
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        RpcRequest request = RpcRequest.builder().methodname(method.getName()).parameters(args).interfacename(method.getDeclaringClass().getName()).paramTypes(method.getParameterTypes()).build();
+        RpcRequest request = RpcRequest.builder()
+                .methodname(method.getName())
+                .parameters(args)
+                .interfacename(method.getDeclaringClass().getName())
+                .paramTypes(method.getParameterTypes())
+                .requestId(UUID.randomUUID().toString())
+                .build();
         return ((RpcResponse) client.sendRPCRequest(request)).getResult();
     }
 }

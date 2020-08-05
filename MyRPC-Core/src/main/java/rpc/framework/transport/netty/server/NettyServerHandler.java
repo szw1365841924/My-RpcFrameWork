@@ -10,19 +10,15 @@ import io.netty.util.ReferenceCountUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import rpc.framework.ThreadPool.RequestHandler;
-import rpc.framework.register.DefaultServiceRegistry;
-import rpc.framework.register.ServiceRegistry;
+import rpc.framework.provider.impl.ServiceProviderImpl;
+import rpc.framework.provider.ServiceProvider;
 
 public class NettyServerHandler extends ChannelInboundHandlerAdapter {
     
     private static final Logger logger = LoggerFactory.getLogger(NettyServerHandler.class);
     
     private static RequestHandler requestHandler = new RequestHandler();
-    private ServiceRegistry registry;
-    
-    public NettyServerHandler(ServiceRegistry registry){
-        this.registry = registry;
-    }
+    private static ServiceProvider provider = new ServiceProviderImpl();
     
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
@@ -30,9 +26,9 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
             logger.info("服务器接收到请求: {}", msg);
             RpcRequest request = (RpcRequest) msg;
             String name = request.getInterfacename();
-            Object service = this.registry.getService(name);
+            Object service = provider.getServiceProvider(name);
             Object result = requestHandler.handle(service, request);
-            ChannelFuture future = ctx.writeAndFlush(RpcResponse.success(result));
+            ChannelFuture future = ctx.writeAndFlush(RpcResponse.success(result, request.getRequestId()));
             future.addListener(ChannelFutureListener.CLOSE);
         } finally {
             ReferenceCountUtil.release(msg);

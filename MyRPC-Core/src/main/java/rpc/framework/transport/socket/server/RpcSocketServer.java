@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import rpc.RpcServer;
 import rpc.framework.ThreadPool.RequestHandler;
 import rpc.framework.ThreadPool.WorkerRunnable;
-import rpc.framework.register.ServiceRegistry;
+import rpc.framework.provider.ServiceProvider;
 
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -14,11 +14,12 @@ import java.util.concurrent.*;
 public class RpcSocketServer implements RpcServer {
     
     private static final Logger logger = LoggerFactory.getLogger(RpcSocketServer.class);
-
-    private final ExecutorService threadPool;
-    private final ServiceRegistry registry; 
     
-    public RpcSocketServer(ServiceRegistry registry){
+    private final int port;
+    private final ExecutorService threadPool;
+    private final ServiceProvider registry; 
+    
+    public RpcSocketServer(ServiceProvider registry, int port){
         int corePoolsize = 10;
         int maximumPoolSizeSize = 100;
         BlockingQueue<Runnable> queue = new ArrayBlockingQueue<>(100);
@@ -28,10 +29,11 @@ public class RpcSocketServer implements RpcServer {
         this.threadPool = new ThreadPoolExecutor(corePoolsize, maximumPoolSizeSize,
                 keepAliveTime, TimeUnit.SECONDS, queue, threadFactory, handler);
         this.registry = registry;
+        this.port = port;
     }
 
     @Override
-    public void start(int port){
+    public void start(){
         try(ServerSocket serverSocket = new ServerSocket(port)){
             logger.info("服务注册成功......");
             Socket socket;
@@ -43,4 +45,7 @@ public class RpcSocketServer implements RpcServer {
             logger.error("发生错误: ", e);
         }
     }
+
+    @Override
+    public <T> void publishService(Object obj, Class<T> clazz) { }
 }

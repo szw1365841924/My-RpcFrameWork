@@ -3,7 +3,7 @@ package rpc;
 
 import dto.RpcRequest;
 
-public interface RpcClient {
+public interface ClientTransport {
 
     Object sendRPCRequest(RpcRequest rpcRequest);
 }

@@ -2,7 +2,7 @@ package api;
 
 import api.service.Hello;
 
-public interface HelloService2 {
+public interface HiService {
     
     String hi(Hello hello);
 }

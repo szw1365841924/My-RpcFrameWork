@@ -8,10 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="example-server" />
-        <module name="example-client" />
+        <module name="MyRPC-Common" />
         <module name="MyRPC-API" />
         <module name="MyRPC-Core" />
-        <module name="MyRPC-Common" />
+        <module name="example-client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -1,4 +1,4 @@
-package rpc.framework.ThreadPool;
+package rpc.framework.threadpool;
 
 import dto.RpcRequest;
 import enumeration.RpcError;

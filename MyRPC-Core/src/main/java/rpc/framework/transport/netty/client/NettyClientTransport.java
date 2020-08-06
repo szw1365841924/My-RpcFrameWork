@@ -8,7 +8,9 @@ import io.netty.util.AttributeKey;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import rpc.ClientTransport;
+import rpc.framework.loadbalancer.LoadBalancer;
 import rpc.framework.registry.ServiceDiscovery;
+import rpc.framework.registry.nacos.NacosServiceDiscovery;
 import rpc.framework.registry.nacos.NacosServiceRegistry;
 import java.net.InetSocketAddress;
 
@@ -18,7 +20,11 @@ public class NettyClientTransport implements ClientTransport {
     private final ServiceDiscovery serviceDiscovery;
     
     public NettyClientTransport(){
-        this.serviceDiscovery = new NacosServiceRegistry();
+        this.serviceDiscovery = new NacosServiceDiscovery();
+    }
+    
+    public NettyClientTransport(LoadBalancer loadBalancer){
+        this.serviceDiscovery = new NacosServiceDiscovery(loadBalancer);
     }
     
     @Override

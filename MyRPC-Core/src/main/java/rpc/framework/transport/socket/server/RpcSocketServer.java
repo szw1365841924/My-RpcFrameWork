@@ -3,8 +3,8 @@ package rpc.framework.transport.socket.server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import rpc.RpcServer;
-import rpc.framework.ThreadPool.RequestHandler;
-import rpc.framework.ThreadPool.WorkerRunnable;
+import rpc.framework.threadpool.RequestHandler;
+import rpc.framework.threadpool.WorkerRunnable;
 import rpc.framework.provider.ServiceProvider;
 
 import java.net.ServerSocket;

@@ -18,7 +18,8 @@ public enum RpcError {
     FAILED_TO_CONNECT_TO_SERVICE_REGISTRY("连接注册中心失败"),
     REGISTER_SERVICE_FAILED("服务注册失败"),
     GET_SERVICE_FAILED("获取服务失败"),
-    CLIENT_CONNECT_SERVER_FAILURE("客户端连接服务器失败");
+    CLIENT_CONNECT_SERVER_FAILURE("客户端连接服务器失败"),
+    DEREGISTER_SERVICE_FAILED("注销服务失败");
     
     private final String message;
 }

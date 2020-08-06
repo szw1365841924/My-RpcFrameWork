@@ -1,6 +1,6 @@
 package socket;
 
-import api.HelloServiceImpl;
+import api.HiAndHelloServiceImpl;
 import rpc.framework.provider.impl.ServiceProviderImpl;
 import rpc.framework.provider.ServiceProvider;
 import rpc.framework.transport.socket.server.RpcSocketServer;
@@ -8,7 +8,7 @@ import rpc.framework.transport.socket.server.RpcSocketServer;
 public class RpcFrameworkServer {
     
     public static void main(String[] args) {
-        HelloServiceImpl service = new HelloServiceImpl();
+        HiAndHelloServiceImpl service = new HiAndHelloServiceImpl();
         ServiceProvider registry = new ServiceProviderImpl();
         registry.addServiceProvider(service);
         RpcSocketServer server = new RpcSocketServer(registry, 9999);

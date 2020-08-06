@@ -19,6 +19,7 @@ import rpc.framework.registry.nacos.NacosServiceRegistry;
 import rpc.framework.serialize.impl.KryoSerializer;
 import rpc.framework.transport.netty.codec.CommonDecoder;
 import rpc.framework.transport.netty.codec.CommonEncoder;
+import util.nacos.hook.ShutdownHook;
 
 import java.net.InetSocketAddress;
 
@@ -47,7 +48,6 @@ public class RpcNettyServer implements RpcServer {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
             serverBootstrap.group(bossGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
-                    .handler(new LoggingHandler(LogLevel.INFO))
                     .option(ChannelOption.SO_BACKLOG, 256)
                     .childOption(ChannelOption.SO_KEEPALIVE, true)
                     .childOption(ChannelOption.TCP_NODELAY, true)
@@ -60,8 +60,9 @@ public class RpcNettyServer implements RpcServer {
                             pipeline.addLast(new NettyServerHandler());
                         }
                     });
-                ChannelFuture future = serverBootstrap.bind(port).sync();
-                future.channel().closeFuture().sync();
+            ChannelFuture future = serverBootstrap.bind(port).sync();
+            ShutdownHook.getShutDownHook().clearAllHook();
+            future.channel().closeFuture().sync();
         } catch (InterruptedException e) {
             logger.error("启动服务器时有错误发生: ", e);
         } finally {

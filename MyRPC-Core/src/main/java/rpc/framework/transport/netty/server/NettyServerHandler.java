@@ -9,9 +9,12 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.ReferenceCountUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import rpc.framework.ThreadPool.RequestHandler;
+import rpc.framework.threadpool.RequestHandler;
 import rpc.framework.provider.impl.ServiceProviderImpl;
 import rpc.framework.provider.ServiceProvider;
+import util.concurrent.ThreadPoolUtils;
+
+import java.util.concurrent.ExecutorService;
 
 public class NettyServerHandler extends ChannelInboundHandlerAdapter {
     
@@ -26,10 +29,13 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
             logger.info("服务器接收到请求: {}", msg);
             RpcRequest request = (RpcRequest) msg;
             String name = request.getInterfacename();
-            Object service = provider.getServiceProvider(name);
-            Object result = requestHandler.handle(service, request);
-            ChannelFuture future = ctx.writeAndFlush(RpcResponse.success(result, request.getRequestId()));
-            future.addListener(ChannelFutureListener.CLOSE);
+            ExecutorService executorService = ThreadPoolUtils.createCustomThreadPoolIfAbsent(name);
+            executorService.execute(() -> {
+                Object service = provider.getServiceProvider(name);
+                Object result = requestHandler.handle(service, request);
+                ChannelFuture future = ctx.writeAndFlush(RpcResponse.success(result, request.getRequestId()));
+                future.addListener(ChannelFutureListener.CLOSE);
+            });
         } finally {
             ReferenceCountUtil.release(msg);
         }

@@ -1,91 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a42c6c17-0a49-4670-a174-6fa1c1edfe80" name="Default Changelist" comment="v3.0 第一次提交(本次整合了Nacos作为注册中心)">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyRPC-API/src/main/java/api/HelloService2.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyRPC-API/src/main/java/api/HiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyRPC-API/target/classes/api/HelloService2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyRPC-Common/src/main/java/enumeration/RpcError.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyRPC-Common/src/main/java/enumeration/RpcError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyRPC-Common/target/classes/enumeration/RpcError.class" beforeDir="false" afterPath="$PROJECT_DIR$/MyRPC-Common/target/classes/enumeration/RpcError.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyRPC-Core/src/main/java/rpc/framework/ThreadPool/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyRPC-Core/src/main/java/rpc/framework/threadpool/RequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyRPC-Core/src/main/java/rpc/framework/ThreadPool/WorkerRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyRPC-Core/src/main/java/rpc/framework/threadpool/WorkerRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyRPC-Core/src/main/java/rpc/framework/registry/nacos/NacosServiceRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyRPC-Core/src/main/java/rpc/framework/registry/nacos/NacosServiceRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyRPC-Core/src/main/java/rpc/framework/transport/netty/client/NettyClientTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyRPC-Core/src/main/java/rpc/framework/transport/netty/client/NettyClientTransport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyRPC-Core/src/main/java/rpc/framework/transport/netty/server/NettyServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyRPC-Core/src/main/java/rpc/framework/transport/netty/server/NettyServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyRPC-Core/src/main/java/rpc/framework/transport/netty/server/RpcNettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyRPC-Core/src/main/java/rpc/framework/transport/netty/server/RpcNettyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyRPC-Core/src/main/java/rpc/framework/transport/socket/server/RpcSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyRPC-Core/src/main/java/rpc/framework/transport/socket/server/RpcSocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/registry/nacos/NacosServiceRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/registry/nacos/NacosServiceRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/transport/netty/client/NettyClientTransport.class" beforeDir="false" afterPath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/transport/netty/client/NettyClientTransport.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/transport/netty/server/RpcNettyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/transport/netty/server/RpcNettyServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-client/src/main/java/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/example-client/src/main/java/netty/NettyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-client/src/main/java/socket/RpcFrameworkClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/example-client/src/main/java/socket/RpcFrameworkClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-client/target/classes/netty/NettyClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/example-client/target/classes/netty/NettyClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-client/target/classes/socket/RpcFrameworkClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/example-client/target/classes/socket/RpcFrameworkClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-server/src/main/java/api/HelloServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/example-server/src/main/java/api/HiAndHelloServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-server/src/main/java/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/example-server/src/main/java/netty/NettyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-server/src/main/java/socket/RpcFrameworkServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/example-server/src/main/java/socket/RpcFrameworkServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-server/target/classes/api/HelloServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-server/target/classes/netty/NettyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/example-server/target/classes/netty/NettyServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-server/target/classes/socket/RpcFrameworkServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/example-server/target/classes/socket/RpcFrameworkServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-API/MyRPC-API.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-API/target/classes/META-INF/MyRPC-API.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-API/target/classes/api/HelloService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-API/target/classes/api/HiService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-API/target/classes/api/service/Hello.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Common/MyRPC-Common.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Common/target/classes/META-INF/MyRPC-Common.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Common/target/classes/checker/RpcMessageChecker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Common/target/classes/dto/RpcRequest$RpcRequestBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Common/target/classes/dto/RpcRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Common/target/classes/dto/RpcResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Common/target/classes/enumeration/RpcError.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Common/target/classes/enumeration/RpcResponseCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Common/target/classes/exception/RpcException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Common/target/classes/rpc/ClientTransport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Common/target/classes/rpc/RpcServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Common/target/classes/util/concurrent/ThreadPoolUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Common/target/classes/util/concurrent/config/ThreadPoolConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Common/target/classes/util/nacos/NacosUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Common/target/classes/util/nacos/hook/ShutdownHook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Common/target/classes/util/zk/CuratorHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/MyRPC-Core.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/META-INF/MyRPC-Core.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/ThreadPool/RequestHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/ThreadPool/WorkerRunnable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/loadbalancer/LoadBalancer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/loadbalancer/impl/RandomLoadBalancer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/loadbalancer/impl/RoundRobinLoadBalancer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/provider/ServiceProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/provider/impl/ServiceProviderImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/proxy/RpcClientProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/registry/ServiceDiscovery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/registry/ServiceRegistry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/registry/nacos/NacosServiceDiscovery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/registry/nacos/NacosServiceRegistry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/registry/zk/ZkServiceDiscovery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/registry/zk/ZkServiceRegistry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/serialize/Impl/KryoSerializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/serialize/Serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/transport/netty/client/ChannelProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/transport/netty/client/NettyClient$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/transport/netty/client/NettyClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/transport/netty/client/NettyClientHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/transport/netty/client/NettyClientTransport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/transport/netty/codec/CommonDecoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/transport/netty/codec/CommonEncoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/transport/netty/server/NettyServerHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/transport/netty/server/RpcNettyServer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/transport/netty/server/RpcNettyServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/transport/socket/client/SocketClientTransport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/classes/rpc/framework/transport/socket/server/RpcSocketServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRPC-Core/target/test-classes/META-INF/MyRPC-Core.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-client/example-client.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-client/target/classes/netty/NettyClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-client/target/classes/netty/NettyClient1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-client/target/classes/socket/RpcFrameworkClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-server/example-server.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-server/target/classes/META-INF/example-server.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-server/target/classes/api/HiAndHelloServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-server/target/classes/netty/NettyServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-server/target/classes/socket/RpcFrameworkServer.class" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/MyRPC-Core/target/" />
-    <ignored path="$PROJECT_DIR$/MyRPC-Common/target/" />
-    <ignored path="$PROJECT_DIR$/MyRPC-API/target/" />
-    <ignored path="$PROJECT_DIR$/MyRPC-Client/target/" />
-    <ignored path="$PROJECT_DIR$/example-client/target/" />
-    <ignored path="$PROJECT_DIR$/example-server/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example-server/src/main/java/netty/NettyServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example-client/src/main/java/netty/NettyClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/example-client/src/main/java/netty/NettyClient1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -165,8 +159,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:/z_maven/apache-maven-3.6.1" />
-        <option name="userSettingsFile" value="C:\z_maven\apache-maven-3.6.1\conf\settings.xml" />
+        <option name="localRepository" value="D:\Java\maven\repository" />
+        <option name="mavenHome" value="D:\Java\maven\apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\Java\maven\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -187,6 +182,7 @@
     <option name="width" value="1675" />
     <option name="height" value="985" />
   </component>
+  <component name="ProjectId" id="1nSfDSZVanNy1kVId8EdcHjEqIs" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -491,16 +487,26 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.3181818" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -513,58 +519,7 @@
       <recent name="rpc.framework" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.NettyClient1">
-    <configuration name="NettyClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="netty.NettyClient" />
-      <module name="example-client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="netty.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NettyClient1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="netty.NettyClient1" />
-      <module name="example-client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="netty.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NettyServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="netty.NettyServer" />
-      <module name="example-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="netty.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.RpcFrameworkClient">
     <configuration name="RpcFrameworkClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="socket.RpcFrameworkClient" />
       <module name="example-client" />
@@ -591,16 +546,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NettyClient1" />
-        <item itemvalue="Application.NettyClient" />
-        <item itemvalue="Application.NettyServer" />
         <item itemvalue="Application.RpcFrameworkClient" />
         <item itemvalue="Application.RpcFrameworkServer" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -632,6 +596,20 @@
       <workItem from="1596683784609" duration="6928000" />
       <workItem from="1596693824683" duration="263000" />
       <workItem from="1596700473622" duration="858000" />
+      <workItem from="1611388298996" duration="320000" />
+      <workItem from="1611388639276" duration="66000" />
+      <workItem from="1611388832263" duration="1748000" />
+      <workItem from="1611390605119" duration="532000" />
+      <workItem from="1611391220489" duration="78000" />
+      <workItem from="1611391549311" duration="103000" />
+      <workItem from="1611391664203" duration="46000" />
+      <workItem from="1611391768027" duration="14000" />
+      <workItem from="1611391791332" duration="127000" />
+      <workItem from="1611391934219" duration="80000" />
+      <workItem from="1611392028722" duration="95000" />
+      <workItem from="1611392164890" duration="25000" />
+      <workItem from="1611393752182" duration="9000" />
+      <workItem from="1611394709691" duration="34000" />
     </task>
     <servers />
   </component>
@@ -685,7 +663,19 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v3.0 第一次提交(本次整合了Nacos作为注册中心)" />
